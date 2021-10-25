@@ -1,17 +1,17 @@
 package com.skilldistillery.jets.entities;
 
+import java.util.ArrayList;
+
 public abstract class Jet {
 
-	protected String type;
 	private String model;
 	private double speed;
 	private int range;
 	private double price;
 
-	public Jet(String type, String model, double speed, int range, double price) {
+	public Jet(String model, double speed, int range, double price) {
 		super();
-		
-		this.type = type;
+
 		this.model = model;
 		this.speed = speed;
 		this.range = range;
@@ -19,17 +19,10 @@ public abstract class Jet {
 	}
 
 	public void fly() {
+		double flyingTime;
+		flyingTime = (double) this.range / this.speed;
+		System.out.println("Flying time is " + Math.round(flyingTime * 100.0) / 100.0 + " hours.");
 
-	}
-	
-	
-
-	public String getType() {
-		return type;
-	}
-
-	public void setType(String type) {
-		this.type = type;
 	}
 
 	public String getModel() {
@@ -66,8 +59,7 @@ public abstract class Jet {
 
 	@Override
 	public String toString() {
-		return "Jet [type=" + type + ", model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price
-				+ "]";
+		return "Jet [model=" + model + ", speed=" + speed + ", range=" + range + ", price=" + price + "]";
 	}
 
 }

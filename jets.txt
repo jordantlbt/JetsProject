@@ -1,4 +1,4 @@
-Fighter Jet,B52 Bomber,650,8800,300
+Fighter,B52 Bomber,650,8800,300
 Cargo,C17,590,2784,700
 Passenger,Concorde,1354,4505,1000
 Passenger,Saturn V,15500,935,60000
